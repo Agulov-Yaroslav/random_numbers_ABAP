@@ -1,0 +1,14 @@
+*&---------------------------------------------------------------------*
+*& Report Z_RANDOM_NUMBERS
+*&---------------------------------------------------------------------*
+*&
+*&---------------------------------------------------------------------*
+REPORT z_random_numbers.
+
+DATA: lv_random_number TYPE i,
+      lv_counter       TYPE i.
+
+DO 100 TIMES.
+  lv_random_number = sy-index * sy-datum MOD 100.
+  WRITE: / 'Random Number:', lv_random_number.
+ENDDO.
